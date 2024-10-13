@@ -78,6 +78,8 @@ where(code = 'value1' or code = 'value2')
 
 ## Future plans
 - .jsx?/.tsx? (embedded inside `fhirpath` template)
+- FHIRPath Mapping Language embedded support inside `{{ }}` and etc
+- FSH embedded support inside `[[ ]]`
 
 
 ## Release Notes
