@@ -69,16 +69,20 @@ class FormatVisitor extends FHIRPathVisitor {
         const expression = `${left} ${operator} ${right}`;
         const totalLength = expression.length;
 
+        const isRightParenthesized =
+            ctx.expression(1).children[0] instanceof FHIRPathParser.ParenthesizedTermContext;
+
         if (
             totalLength > this.maxLength &&
-            !['=', '<=', '>=', '<', '>', '!=', 'contains', 'in'].includes(operator)
+            !['=', '<=', '>=', '<', '>', '!=', 'contains', 'in'].includes(operator) &&
+            !isRightParenthesized
         ) {
             left = this.visit(ctx.expression(0));
-	    this.indentLevel++;
+            this.indentLevel++;
             right = this.visit(ctx.expression(1));
-	    this.indentLevel--;
+            this.indentLevel--;
             operator = ctx.getChild(1).getText();
-            return`${left} ${operator}\n${this.getIndentation()}${this.indent()}${right}`;
+            return `${left} ${operator}\n${this.getIndentation()}${this.indent()}${right}`;
         } else {
             return `${left} ${operator} ${right}`;
         }
