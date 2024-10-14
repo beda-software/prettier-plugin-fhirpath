@@ -47,7 +47,7 @@ where(
 )
 ```
 
-- Union operator should be split by new lines if the total length is more than N characters
+- Binary operator should be split by new lines if the total length is more than N characters
 
 Should not be formatted with new lines:
 ```fhirpath
@@ -56,8 +56,7 @@ code in 'a' | 'b' | 'c'
 
 Should be formatted with new lines:
 ```fhirpath
-code in 
-    'very-long-code-first' | 
+code in 'very-long-code-first' | 
     'very-long-code-second' | 
     'very-long-code-third'
 ```
@@ -84,6 +83,6 @@ where(code = 'value1' or code = 'value2')
 
 ## Release Notes
 
-### 0.0.1a (in development)
+### 0.0.1-alpha (in development)
 
 - Initial release
