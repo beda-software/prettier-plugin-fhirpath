@@ -1,6 +1,5 @@
 {
   "name": "prettier-plugin-fhirpath",
-  "type": "module",
   "version": "0.0.1a0",
   "description": "",
   "main": "src/index.js",

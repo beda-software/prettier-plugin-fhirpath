@@ -1,8 +1,8 @@
 // Generated from FHIRPath.g4 by ANTLR 4.9.3
 // jshint ignore: start
-import antlr4 from 'antlr4';
-import FHIRPathListener from './FHIRPathListener.js';
-import FHIRPathVisitor from './FHIRPathVisitor.js';
+const antlr4 = require('antlr4');
+const FHIRPathListener = require('./FHIRPathListener.js');
+const FHIRPathVisitor = require('./FHIRPathVisitor.js');
 
 
 const serializedATN = ["\u0003\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786",
@@ -111,7 +111,7 @@ const decisionsToDFA = atn.decisionToState.map( (ds, index) => new antlr4.dfa.DF
 
 const sharedContextCache = new antlr4.PredictionContextCache();
 
-export default class FHIRPathParser extends antlr4.Parser {
+class FHIRPathParser extends antlr4.Parser {
 
     static grammarFileName = "FHIRPath.g4";
     static literalNames = [ null, "'.'", "'['", "']'", "'+'", "'-'", "'*'", 
@@ -2931,3 +2931,6 @@ FHIRPathParser.PluralDateTimePrecisionContext = PluralDateTimePrecisionContext;
 FHIRPathParser.TypeSpecifierContext = TypeSpecifierContext; 
 FHIRPathParser.QualifiedIdentifierContext = QualifiedIdentifierContext; 
 FHIRPathParser.IdentifierContext = IdentifierContext; 
+
+
+module.exports = FHIRPathParser;

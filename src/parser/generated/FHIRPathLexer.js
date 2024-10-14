@@ -1,6 +1,6 @@
 // Generated from FHIRPath.g4 by ANTLR 4.9.3
 // jshint ignore: start
-import antlr4 from 'antlr4';
+const antlr4 = require('antlr4');
 
 
 
@@ -329,7 +329,7 @@ const atn = new antlr4.atn.ATNDeserializer().deserialize(serializedATN);
 
 const decisionsToDFA = atn.decisionToState.map( (ds, index) => new antlr4.dfa.DFA(ds, index) );
 
-export default class FHIRPathLexer extends antlr4.Lexer {
+class FHIRPathLexer extends antlr4.Lexer {
 
     static grammarFileName = "FHIRPath.g4";
     static channelNames = [ "DEFAULT_TOKEN_CHANNEL", "HIDDEN" ];
@@ -443,3 +443,4 @@ FHIRPathLexer.LINE_COMMENT = 63;
 
 
 
+module.exports = FHIRPathLexer;

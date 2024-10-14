@@ -1,9 +1,9 @@
 // Generated from FHIRPath.g4 by ANTLR 4.9.3
 // jshint ignore: start
-import antlr4 from 'antlr4';
+const antlr4 = require('antlr4');
 
 // This class defines a complete listener for a parse tree produced by FHIRPathParser.
-export default class FHIRPathListener extends antlr4.tree.ParseTreeListener {
+class FHIRPathListener extends antlr4.tree.ParseTreeListener {
 
 	// Enter a parse tree produced by FHIRPathParser#entireExpression.
 	enterEntireExpression(ctx) {
@@ -376,3 +376,5 @@ export default class FHIRPathListener extends antlr4.tree.ParseTreeListener {
 
 
 }
+
+module.exports = FHIRPathListener;
