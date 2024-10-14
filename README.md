@@ -83,6 +83,6 @@ where(code = 'value1' or code = 'value2')
 
 ## Release Notes
 
-### 0.0.1-alpha (in development)
+### 0.0.1 (in development)
 
 - Initial release

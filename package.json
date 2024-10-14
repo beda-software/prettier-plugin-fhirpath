@@ -1,16 +1,28 @@
 {
   "name": "prettier-plugin-fhirpath",
-  "version": "0.0.1-alpha",
-  "description": "",
+  "version": "0.0.1-alpha-2",
+  "description": "Prettier plugin for FHIRPath",
   "main": "src/index.js",
+  "files": [
+    "README.md",
+    "LICENSE",
+    "src/"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "prettier",
+    "fhirpath"
+  ],
+  "author": "beda.software",
   "license": "ISC",
   "dependencies": {
     "antlr4": "4.9.3",
     "prettier": "^3.3.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beda.software/prettier-plugin-fhirpath.git"
   }
 }
