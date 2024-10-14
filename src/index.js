@@ -29,7 +29,7 @@ module.exports = {
 
         yaml: {
             ...yamlPlugin.printers.yaml,
-            print: (path, options, print) => {
+            print: (path, opts, print) => {
                 const node = path.getValue();
 
                 if (node.type === 'mappingItem') {
@@ -42,7 +42,7 @@ module.exports = {
                             ' >-',
 
                             b.align(
-                                ' '.repeat(options.tabWidth),
+                                ' '.repeat(opts.tabWidth),
                                 formatFHIRPath(node.value.content.value)
                                     .split('\n')
                                     .flatMap((line) => [b.hardline, line]),
@@ -50,7 +50,7 @@ module.exports = {
                         ];
                     }
                 }
-                return yamlPlugin.printers.yaml.print(path, options, print);
+                return yamlPlugin.printers.yaml.print(path, opts, print);
             },
         },
     },
